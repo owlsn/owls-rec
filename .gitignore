@@ -1,0 +1,8 @@
+blade-bin
+build64_release/
+build64_debug/
+.Building.lock
+.sconsign.dblite
+.DS_Store
+*.pyc
+.vscode/
