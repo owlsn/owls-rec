@@ -1,6 +1,0 @@
-workspace(name = "helloworld")
-
-local_repository(
-    name = "thirdparty",
-    path = "../thirdparty",
-)
