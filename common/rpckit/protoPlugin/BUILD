@@ -1,9 +1,19 @@
+proto_library(
+    name = 'RpckitProto',
+    srcs = [
+        'Rpckit.proto',
+    ],
+)
 
 cc_binary(
-  name = "hello-world",
-  srcs = ["hello-world.cc"],
-  deps = [
-    ":hello-greet",
-    "//lib:hello-time"
+    name = 'ProtoPlugin',
+    srcs = [
+        'ProtoPlugin.cpp',
+        'ServiceGenerator.cpp',
+    ],
+    deps = [
+        ':RpckitProto',
+        '@protobuf//:protoc',
+        '@boost//:system',
     ],
 )
