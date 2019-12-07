@@ -3,6 +3,9 @@ proto_library(
     srcs = [
         'Rpckit.proto',
     ],
+    deps = [
+      '@com_google_protobuf//:descriptor_proto'
+    ]
 )
 
 cc_binary(
@@ -13,7 +16,7 @@ cc_binary(
     ],
     deps = [
         ':RpckitProto',
-        '@protobuf//:protoc',
+        '@com_google_protobuf//:protoc',
         '@boost//:system',
     ],
 )
